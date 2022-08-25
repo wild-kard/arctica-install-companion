@@ -4,7 +4,14 @@ Note: lettered steps are to be manually completed in the terminal but will event
 
 step 1: Start on a fresh ubuntu installation on a dedicated laptop (this laptop will be your full node and ideally will have a fairly new 500gb internal SATA SSD
 
-step 1a: install bitcoin core to the internal disk
+step 1a: [may remove or move this step] install bitcoin core to the internal disk and start syncing, make sure that ~/.bitcoin is where blockdata and chainstate are being stored, this will be important later
+
+step 1b: create your .bitcoin directory inside of root
+`mkdir .bitcoin `
+
+step 1c: create chainstate and blocks directories inside of .bitcoin, these will be symlinked later
+`mkdir chainstate ~/.bitcoin`
+`mkdir blocks ~/.bitcoin`
 
 step 2 (arctica setup/2): set up password
 
@@ -59,3 +66,21 @@ step 7: DD the appropriate storage device with the downloaded tails image (chang
 step 7a: run the `setup-persistence.sh` script
 (i haven't tested this outside of tails yet)
 `sudo bash setup-persistence.sh`
+
+step 7b: step removed [placeholder]
+
+step 7c: Download Bitcoin Core [if you dont have it already from an earlier step]
+`wget https://bitcoincore.org/bin/bitcoin-core-23.0/bitcoin-23.0-x86_64-linux-gnu.tar.gz`
+
+step 7d: Extract the tarball to the persistent directory
+`tar -xvzf bitcoin-23.0-x86_64-linux-gnu.tar.gz -C /media/user/TailsData/Persistent`
+
+step 7e: download and copy the fully compiled arctica application into Persistent directory
+`mkdir arctica /media/user/TailsData/Persistent/ ` [this is a place holder command]
+
+step 7f: 
+
+
+I THINK these steps must happen within tails
+Step ? symlink bitcoin data folders
+Step ? Configure automount of local disk
