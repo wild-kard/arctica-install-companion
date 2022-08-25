@@ -64,10 +64,11 @@ step 7: DD the appropriate storage device with the downloaded tails image (chang
 `sudo dd if=tails-amd64-5.3.1/tails-amd64-5.3.1.img of=/dev/sda bs=16M oflag=direct status=progress`
 
 step 7a: run the `setup-persistence.sh` script
-(i haven't tested this outside of tails yet)
+(i haven't tested this outside of tails yet, todo: should just automatically set password to 'a' instead of prompting)
 `sudo bash setup-persistence.sh`
 
-step 7b: step removed [placeholder]
+step 7b: add virtual labels to the device
+`touch /media/user/TailsData/Persistent/sd1.txt && touch /media/user/TailsData/Persistent/setup1.txt`
 
 step 7c: Download Bitcoin Core [if you dont have it already from an earlier step]
 `wget https://bitcoincore.org/bin/bitcoin-core-23.0/bitcoin-23.0-x86_64-linux-gnu.tar.gz`
@@ -76,11 +77,85 @@ step 7d: Extract the tarball to the persistent directory
 `tar -xvzf bitcoin-23.0-x86_64-linux-gnu.tar.gz -C /media/user/TailsData/Persistent`
 
 step 7e: download and copy the fully compiled arctica application into Persistent directory
-`mkdir arctica /media/user/TailsData/Persistent/ ` [this is a place holder command]
+`mkdir arctica /media/user/TailsData/Persistent/ ` [this is a place holder command since arctica isn't finished]
 
-step 7f: 
+step 8 (arctica setup/5) once above process has completed, remove SD 1.
+Repeat steps 5i-7e with SD 2
+7b will be
+`touch /media/user/TailsData/Persistent/sd2.txt && touch /media/user/TailsData/Persistent/setup2.txt`
+
+step 9 (arctica setup/6) once above process has completed, remove SD 2.
+Repeat steps 5i-7e with SD 3
+7b will be
+`touch /media/user/TailsData/Persistent/sd3.txt && touch /media/user/TailsData/Persistent/setup3.txt`
+
+step 10 (arctica setup/7) once above process has completed, remove SD 3.
+Repeat steps 5i-7e with SD 4
+7b will be
+`touch /media/user/TailsData/Persistent/sd4.txt && touch /media/user/TailsData/Persistent/setup4.txt`
+
+step 11 (arctica setup/8) once above process has completed remove SD 4.
+Repeat steps 5i-7e with SD 5
+7b will be
+`touch /media/user/TailsData/Persistent/sd5.txt && touch /media/user/TailsData/Persistent/setup5.txt`
+
+step 12 (arctica setup/9) once above process has completed remove SD 5.
+Repeat steps 5i-7e with SD 6
+7b will be
+`touch /media/user/TailsData/Persistent/sd6.txt && touch /media/user/TailsData/Persistent/setup6.txt`
+
+step 13 (arctica setup/10) once above process has completed remove SD 6.
+Repeat steps 5i-7e with SD 7
+7b will be
+`touch /media/user/TailsData/Persistent/sd7.txt && touch /media/user/TailsData/Persistent/setup7.txt`
+
+step 14 (arctica setup/11) reboot into SD 1 
+You will need to configure your network (wifi if not connected to LAN)
+complete the TOR wizard
+Open Arctica which will direct you to step 12 of setup via virtual label created in step 7b 
+
+Step 15 (arctica setup/12) insert the setup CD
+
+step 15a
+Make automount directories
+`mkdir --parents /live/persistence/TailsData_unlocked/dotfiles/.config/autostart`
+
+step15b create the start up file
+`cd && cd /live/persistence/TailsData_unlocked/dotfiles/.config/autostart && echo "[Desktop Entry] X-GNOME-Autostart-enabled=true Exec=/udisksctl mount --block-device /dev/nvme0n1p2 Encoding=UTF-8 Version=1.0 Type=Application Name=autostart Terminal=false" > mount_internal.desktop`
+
+step 15c give autostart directories the proper permissions:
+`sudo chmod -R 777 /live/persistence/TailsData_unlocked/dotfiles/.config/autostart && sudo chmod +x /live/persistence/TailsData_unlocked/dotfiles/.config/autostart/mount_internal.desktop`
+
+step 15d mount the local disk since we haven't restarted yet
+`udisksctl mount --block-device /dev/nvme0n1p2`
+
+step 15e create a .bitcoin dir inside the persistent dotfiles
+`mkdir .bitcoin /live/persistence/TailsData_unlocked/dotfiles && cd`
+
+step 15f create symlink to chainstate folder on local disk [your device path will be different]
+`cd /live/persistence/TailsData_unlocked/dotfiles/.bitcoin && ln -s /media/amnesia/a988dd30-61b1-49d7-88f4-50b8c450e5c0/.bitcoin/chainstate chainstate`
+
+step 15g create symlink to blocks folder on local disk [your device path will be different]
+`ln -s /media/amnesia/a988dd30-61b1-49d7-88f4-50b8c450e5c0/.bitcoin/blocks blocks`
+
+step 15h generate bitcoin xpriv, save to persistent and export xpub to setup CD (i THINK we can do this without a restart to get our blockdata folders synced with symlink)
+
+step 15i remove old virtual label and replace with new virtual label
+`cd ~/Persistent && rm -r -f setup1.txt && touch setup8.txt`
 
 
-I THINK these steps must happen within tails
-Step ? symlink bitcoin data folders
-Step ? Configure automount of local disk
+step 16 (arctica setup/13) power off, remove SD 1, insert SD 2 and reboot into tails
+You will need to configure your network (wifi if not connected to LAN)
+complete the TOR wizard
+Open Arctica which will direct you to step 14 of setup via virtual label created in step 7b 
+repeat all of steps 15a-15i
+15i will be
+`cd ~/Persistent && rm -r -f setup2.txt && touch setup9.txt`
+
+step 17 (arctica setup/14) power off, remove SD 2, insert SD 3 and reboot into tails
+You will need to configure your network (wifi if not connected to LAN)
+complete the TOR wizard
+Open Arctica which will direct you to step 15 of setup via virtual label created in step 7b 
+repeat all of steps 15a-15i
+15i will be
+`cd ~/Persistent && rm -r -f setup3.txt && touch setup10.txt`
