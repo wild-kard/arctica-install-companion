@@ -4,6 +4,8 @@ Note: lettered steps are to be manually completed in the terminal but will event
 
 step 1: Start on a fresh ubuntu installation on a dedicated laptop (this laptop will be your full node and ideally will have a fairly new 500gb internal SATA SSD
 
+step 1a: install bitcoin core to the internal disk
+
 step 2 (arctica setup/2): set up password
 
 step 3 (arctica setup/2): confirm password
@@ -53,3 +55,7 @@ step 6a: identify the newly inserted device
 
 step 7: DD the appropriate storage device with the downloaded tails image (change the `of=/dev/sda` below to your target device)
 `sudo dd if=tails-amd64-5.3.1/tails-amd64-5.3.1.img of=/dev/sda bs=16M oflag=direct status=progress`
+
+step 7a: run the `setup-persistence.sh` script
+(i haven't tested this outside of tails yet)
+`sudo bash setup-persistence.sh`
