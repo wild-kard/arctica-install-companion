@@ -158,3 +158,48 @@ step 17 (arctica setup/14) power off, remove SD 2, insert SD 3 and reboot into t
 <br>repeat all of steps 15a-15i
 <br>15i will be
 <br>`cd ~/Persistent && rm -r -f setup3.txt && touch setup10.txt`
+
+step 18 (arctica setup/15) power off, remove SD 3, remove Setup CD, move to secondary machine, insert SD 4, boot into tails
+<br>You will need to configure your network (wifi if not connected to LAN)
+<br>complete the TOR wizard
+<br>Open Arctica which will direct you to step 16 of setup via virtual label created in step 7b 
+<br>repeat all of steps 15a-15i
+<br>15i will be
+<br>`cd ~/Persistent && rm -r -f setup4.txt && touch setup11.txt`
+
+step 19 (arctica setup/16) insert the set up CD
+
+step 20 (arctica setup/17) power off, remove SD 4, insert SD 5 and reboot into tails
+<br>You will need to configure your network (wifi if not connected to LAN)
+<br>complete the TOR wizard
+<br>Open Arctica which will direct you to step 18 of setup via virtual label created in step 7b 
+<br>repeat all of steps 15a-15i
+<br>15i will be
+<br>`cd ~/Persistent && rm -r -f setup5.txt && touch setup12.txt`
+
+step 21 (arctica setup/18) power off, remove SD 5, insert SD 6 and reboot into tails
+<br>You will need to configure your network (wifi if not connected to LAN)
+<br>complete the TOR wizard
+<br>Open Arctica which will direct you to step 19 of setup via virtual label created in step 7b 
+<br>repeat all of steps 15a-15i
+<br>15i will be
+<br>`cd ~/Persistent && rm -r -f setup6.txt && touch setup13.txt`
+
+step 22 (arctica setup/19) power off, remove SD 6, insert SD 7 and reboot into tails
+<br>You will need to configure your network (wifi if not connected to LAN)
+<br>complete the TOR wizard
+<br>Open Arctica which will direct you to step 20 of setup via virtual label created in step 7b 
+<br>repeat all of steps 15a-15i
+<br>15i will be
+<br>`cd ~/Persistent && rm -r -f setup7.txt && touch setup14.txt`
+
+Step 23 (arctica setup/20) remove SD 7, remove the setup CD, return to primary machine and reboot into SD 1
+
+step 24 (arctica setup/21) insert the set up CD
+At this point the Xpubs from all 7 xprivs will be loaded into memory so we can create the descriptor and start making backups of our persistent directory (maybe not the entire thing?)
+
+step 25 (arctica setup/22) remove the setup CD
+
+step 26 (arctica setup/23) insert CD 1
+creates backup of important stuff
+
