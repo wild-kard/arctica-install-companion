@@ -157,5 +157,5 @@ You will need to configure your network (wifi if not connected to LAN)
 complete the TOR wizard
 Open Arctica which will direct you to step 15 of setup via virtual label created in step 7b 
 repeat all of steps 15a-15i
-15i will be
+<br>15i will be
 `cd ~/Persistent && rm -r -f setup3.txt && touch setup10.txt`
