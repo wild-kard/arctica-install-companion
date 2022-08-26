@@ -196,10 +196,20 @@ step 22 (arctica setup/19) power off, remove SD 6, insert SD 7 and reboot into t
 Step 23 (arctica setup/20) remove SD 7, remove the setup CD, return to primary machine and reboot into SD 1
 
 step 24 (arctica setup/21) insert the set up CD
-At this point the Xpubs from all 7 xprivs will be loaded into memory so we can create the descriptor and start making backups of our persistent directory (maybe not the entire thing?)
+<br>At this point the Xpubs from all 7 xprivs will be loaded into memory so we can create the descriptor and start making backups of our persistent directory (maybe not the entire thing?)
+
+step 24a remove the virtual label and add a new virtual label
+<br>`cd ~/Persistent && rm -r -f setup8.txt && touch setup15.txt`
 
 step 25 (arctica setup/22) remove the setup CD
 
 step 26 (arctica setup/23) insert CD 1
-creates backup of important stuff
+<br>creates backup of important stuff (decide what later)
+
+step 27 (arctica setup/24) remove CD 1 and insert DVD 1
+<br>creates backup of important stuff (decide what later)
+
+step 28 (arctica setup/25) remove all devices from the machine and place SD 1, CD 1, and DVD 1 into envelope 1. Insert SD 2 and reboot. 
+
+step 29 (arctica setup/26) power off, insert SD 2, and reboot
 
