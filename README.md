@@ -198,7 +198,7 @@ Step 23 (arctica setup/20) remove SD 7, remove the setup CD, return to primary m
 step 24 (arctica setup/21) insert the set up CD
 <br>At this point the Xpubs from all 7 xprivs will be loaded into memory so we can create the descriptor and start making backups of our persistent directory (maybe not the entire thing?)
 
-step 24a remove the virtual label and add a new virtual label
+step 24a remove the virtual label and add a new virtual label to SD 1
 <br>`cd ~/Persistent && rm -r -f setup8.txt && touch setup15.txt`
 
 step 25 (arctica setup/22) remove the setup CD
@@ -209,9 +209,9 @@ step 26 (arctica setup/23) insert CD 1
 step 27 (arctica setup/24) remove CD 1 and insert DVD 1
 <br>creates backup of important stuff (decide what later)
 
-step 28 (arctica setup/25) remove all devices from the machine and place SD 1, CD 1, and DVD 1 into envelope 1. Insert SD 2 and reboot. 
+step 28 (arctica setup/25) remove all devices from the machine and place SD 1, CD 1, and DVD 1 into envelope 1.
 
-step 29 (arctica setup/26) power off, insert SD 2, and reboot
+step 29 (arctica setup/26) power off, insert SD 2, and reboot [this screen may be redundant with previous screen]
 
 step 30 (arctica setup/27a) insert the setup CD (to load the descriptor into memory)
 
@@ -221,14 +221,41 @@ step 31 (arctica setup/27b) remove the setup CD and insert CD 2
 step 32 (arctica setup/28) remove CD 2 and insert DVD 2
 <br>creates backup of important stuff (decide what later)
 
-step 32a remove the virtual label
+step 32a remove the virtual label from SD 2
 <br>`cd ~/Persistent && rm -r -f setup9.txt`
 
-step 33 (arctica setup/29) remove all devices from the machine and place SD 2, CD 2, and DVD 2 into envelope 2. Insert SD 3 and reboot. 
+step 33 (arctica setup/29) remove all devices from the machine and place SD 2, CD 2, and DVD 2 into envelope 2. 
 
-step 34 (arctica setup/30) power off, insert SD 3, and reboot
+step 34 (arctica setup/30) power off, insert SD 3, and reboot [this screen may be redundant with previous screen unless we can load into RAM]
 
 step 35 (arctica setup/31a) insert the setup CD (to load descriptor into memory)
 
 step 36 (arctica setup/31b) remove the setup CD and insert CD 3
+<br>creates backup of important stuff (decide what later)
 
+step 37 (arctica setup/32) remove CD 3 and insert DVD 3
+<br>creates backup of important stuff (decide what later)
+
+step 37a remove the virtual label from SD 3
+<br>`cd ~/Persistent && rm -r -f setup10.txt`
+
+step 38 (arctica setup/33) remove all devices from the machine and place SD 3, CD 3, and DVD 3 into envelope 3. 
+
+step 39 (arctica setup/34) power off, switch to secondary machine, insert SD 4, and reboot [this screen may be redundant with previous screen unless we can load into RAM]
+
+step 40 (arctica setup/35a) insert the setup CD (to load descriptor into memory)
+
+step 41 (arctica setup/35b) remove setup CD and insert CD 4
+<br>creates backup of important stuff (decide what later)
+
+step 42 (arctica setup/36) remove CD 4 and insert DVD 4
+<br>creates backup of important stuff (decide what later)
+
+step 42a remove the virtual label from SD 4
+<br>`cd ~/Persistent && rm -r -f setup11.txt`
+
+step 43 (arctica setup/37) remove all devices from the machine and place SD 4, CD 4, and DVD 4 into envelope 4. 
+
+step 44 (arctica setup/38) power off, insert SD 5, and reboot [this screen may be redundant with previous screen unless we can load into RAM]
+
+step 45 (arctica setup/39a) insert the setup CD (to load descriptor into memory)
