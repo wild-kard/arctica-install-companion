@@ -1,6 +1,6 @@
 # arctica-install-companion
 
-Note: lettered steps are to be manually completed in the terminal but will eventually be scripts executed as user interacts with arctica GUI
+Note: lettered steps are to be manually completed in the terminal but will eventually be scripts executed as user interacts with arctica GUI. Ideally this guide should be walked through alongside the front end with the simulator to identify discrepencies. Eventually this may be turned into a guide for users who prefer to walk through arctica setup manually (v2?)
 
 step 1: Start on a fresh ubuntu installation on a dedicated laptop (this laptop will be your full node and ideally will have a fairly new 500gb internal SATA SSD
 
