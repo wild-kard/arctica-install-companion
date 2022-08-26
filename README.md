@@ -259,3 +259,52 @@ step 43 (arctica setup/37) remove all devices from the machine and place SD 4, C
 step 44 (arctica setup/38) power off, insert SD 5, and reboot [this screen may be redundant with previous screen unless we can load into RAM]
 
 step 45 (arctica setup/39a) insert the setup CD (to load descriptor into memory)
+
+step 46 (arctica setup/39b) remove the setup CD and insert CD 5
+<br>creates backup of important stuff (decide what later)
+
+step 47 (arctica setup/40) remove CD 5 and insert DVD 5
+
+step47a remove the virtual label from SD 5
+<br>`cd ~/Persistent && rm -r -f setup12.txt`
+
+step 48 (arctica setup/41) remove all devices from the machine and place SD 5, CD 5, and DVD 5 into envelope 5. 
+
+step 49 (arctica setup/42) power off, insert SD 6, and reboot [this screen may be redundant with previous screen unless we can load into RAM]
+
+step 50 (arctica setup/43a) insert the setup CD (to load descriptor into memory)
+
+step 51 (arctica setup/43b) remove the setup CD and insert CD 6
+<br>creates backup of important stuff (decide what later)
+
+step 52 (arctica setup/44) remove CD 6 and insert DVD 6
+
+step 52a remove the virtual label from SD 6
+<br>`cd ~/Persistent && rm -r -f setup13.txt`
+
+step 53 (arctica setup/45) remove all devices from the machine and place SD 6, CD 6, and DVD 6 into envelope 6. 
+
+step 54 (arctica setup/46) power off, insert SD 7, and reboot [this screen may be redundant with previous screen unless we can load into RAM]
+
+step 55 (arctica setup/47a) insert the setup CD (to load descriptor into memory)
+
+step 56 (arctica setup/47b) remove the setup CD and insert CD 7
+<br>creates backup of important stuff (decide what later)
+
+step 57 (arctica setup/48) remove CD 7 and insert DVD 7
+
+step 57a remove the virtual label from SD 7
+<br>`cd ~/Persistent && rm -r -f setup14.txt`
+
+step 58 (arctica setup/49a) remove all devices from the machine and place SD 7, CD 7, and DVD 7 into envelope 7.
+
+step 59 (arctica setup/49b) destroy your setup CD
+
+step 60 (arctica setup/50a) return to primary machine, insert SD 1 and reboot into tails
+
+step 61 (arctica setup/50b) finish blockchain sync
+
+step 61a remove virtual label from SD 1
+<br>`cd ~/Persistent && rm -r -f setup15.txt`
+
+step 62 (arctica setup/51) initial sync complete, you can now log in
