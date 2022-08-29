@@ -20,6 +20,12 @@ step 3 (arctica setup/2): confirm password
 
 step 4 (arctica setup/3): label your 8 CDs, 7 DVDs, 7 SD cards (or usbs) and 7 envelopes
 
+step 4a insert setup CD to receieve decryption key so BPS is not required during initial setup [this screen needs to be added to arctica]
+
+step 4b generate encryption key to be used in pgp
+example, not tested, should eventually output to a directory on the setup CD
+`ssh-keygen -t rsa -N '' -b 4096 -C "your_email@example.com" -f $HOME/.ssh/id_rsa`
+
 step 5a: import the tails signing key and add to the GnuPGP keyring 
 <br>`wget https://tails.boum.org/tails-signing.key gpg --import < tails-signing.key`
 
