@@ -2,8 +2,6 @@
 
 Note1: lettered steps are to be manually completed in the terminal but will eventually be scripts executed as user interacts with arctica GUI. Ideally this guide should be walked through alongside the front end with the simulator to identify discrepencies. Eventually this may be turned into a guide for users who prefer to walk through arctica setup manually (v2?)
 
-<br>Note2: Currently assume that a RAMDISK is created everytime the user starts up Arctica. This will be the secure environment where the encrypted directory is extracted to when the user decrypts (either via BPS or manually)
-
 <br> the (arctica setup/X) labels designate where the user is in the latest build of the front end simulator
 
 step 1: Start on a fresh ubuntu installation on a dedicated laptop (this laptop will be your full node and ideally will have a fairly new 500gb internal SATA SSD
@@ -147,9 +145,9 @@ step 15f create symlink to chainstate folder on local disk [your device path wil
 step 15g create symlink to blocks folder on local disk [your device path will be different]
 <br>`ln -s /media/amnesia/a988dd30-61b1-49d7-88f4-50b8c450e5c0/.bitcoin/blocks blocks`
 
-step 15h: generate bitcoin xpriv into 'encrypted' directory in RAM disk and export xpub to setup CD (i THINK we can do this without a restart to get our blockdata folders synced with symlink)
+step 15h: generate bitcoin xpriv into an 'encrypted' directory in a non persistent space and export xpub to setup CD (i THINK we can do this without a restart to get our blockdata folders synced with symlink)
 
-step 15i: zip 'encrypted' directory into a tarball, encrypt with gpg (using setup CD ssh key as passphrase) and move the encrypted tarball to the SD card
+step 15i: zip 'encrypted' directory into a tarball, encrypt with gpg (using setup CD ssh key as passphrase) and move the encrypted tarball to the SD card's persistent directory
 
 step 15i remove old virtual label and replace with new virtual label
 <br>`cd ~/Persistent && rm -r -f setup1.txt && touch setup8.txt`
