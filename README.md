@@ -330,7 +330,7 @@ OR
 create a 3 of 5 scheme with Shamir secret sharing
 <br> `sudo apt install ssss`
 <br>`ssss-split -t 3 -n 5`
-enter the secret
+enter the secret (up to 128 ASCII characters)
 <br>`********`
 <br> `ssss-combine -t 3`
 
