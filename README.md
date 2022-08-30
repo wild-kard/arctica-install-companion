@@ -318,3 +318,20 @@ step 61a remove virtual label from SD 1
 <br>`cd ~/Persistent && rm -r -f setup15.txt`
 
 step 62 (arctica setup/51) initial sync complete, you can now log in
+
+
+
+Notes: Shamir Secret Sharing
+<br>`sudo apt-get update`
+<br> `sudo apt-get install libgfshare-bin `
+
+OR
+
+create a 3 of 5 scheme with Shamir secret sharing
+<br> `sudo apt install ssss`
+<br>`ssss-split -t 3 -n 5`
+enter the secret
+<br>`********`
+<br> `ssss-combine -t 3`
+
+
