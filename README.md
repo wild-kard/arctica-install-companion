@@ -45,10 +45,10 @@ step 5e: certify the tails signing key
 <br>`gpg --lsign-key A490D0F4D311A4153E2BB7CADBB802B258ACD84F`
 
 step 5f: download tails 
-<br>`wget --continue http://dl.amnesia.boum.org/tails/stable/tails-amd64-5.3.1/tails-amd64-5.3.1.img`
+<br>`wget --continue http://dl.amnesia.boum.org/tails/stable/tails-amd64-5.4/tails-amd64-5.4.img `
 
 step 5g: download signature of the usb image 
-<br>`wget https://tails.boum.org/torrents/files/tails-amd64-5.3.1.img.sig` 
+<br>`wget https://tails.boum.org/torrents/files/tails-amd64-5.4.img.sig ` 
 
 step 5h: verify the usb image is signed with the tails signing key 
 <br>`TZ=UTC gpg --no-options --keyid-format long --verify tails-amd64-5.3.1.img.sig tails-amd64-5.3.1.img`
